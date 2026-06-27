@@ -175,7 +175,7 @@ It's definitely functional, although I'll probably design a proper enclosure for
 
 One problem I ran into was that the servo wasn't strong enough to reliably hold the door open once power was removed. I could have kept the servo energized continuously, but I'd rather avoid that.
 
-Instead, I added a simple counterweight to the inside of the door. Now the door is almost perfectly balanced, with the outside still being slightly heavier so it naturally closes once the servo lowers the arm.
+Instead, I added a simple counterweight to the inside of the door (just an extra piece of MDF). Now the door is almost perfectly balanced, with the outside still being slightly heavier so it naturally closes once the servo lowers the arm.
 
 This also means ESPHome can safely detach the servo after opening (`auto_detach_time`), so the servo isn't constantly drawing power.
 
