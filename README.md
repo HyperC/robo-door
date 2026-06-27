@@ -2,6 +2,10 @@
 
 A hidden garage door for the Roborock Qrevo Slim, controlled via ESPHome and Home Assistant.
 
+![Door closed from inside](./assets/doorclosed.jpeg)
+
+![Door open from outside](./assets/dooropen-outside.jpeg)
+
 ## Installation Guide
 
 ### 1. Hardware
@@ -46,7 +50,11 @@ A normal piano hinge doesn't work very well here because:
 
 Instead of rotating around a fixed pivot, the hinge creates an offset pivot point. This causes the top edge of the door to move inward first, after which the door rotates outward and upward.
 
-Because my opening sits directly against a wall, I designed custom hinges that mount on top of the frame instead of inside it. I've attached the STL files in case someone has a similar setup.
+Because my opening sits directly against a wall, I designed custom hinges that mount on top of the frame instead of inside it. STL files are in the [assets](./assets/) folder.
+
+![Hinge mechanism design](./assets/door-design.png)
+
+![Hinges installed with door closed](./assets/doorclosed.jpeg)
 
 ## Servo Installation
 
@@ -56,7 +64,7 @@ I designed a printable servo bracket that screws to the cabinet and keeps everyt
 
 The little wheel at the end of the arm rolls against the door, which greatly reduces friction and makes opening much smoother. Glue the small retaining cap onto the wheel so it can't slide off.
 
-See the photos for the exact positioning.
+![Servo, linkage arm, and door open](./assets/dooropen.png)
 
 ## ESPHome
 
@@ -161,7 +169,9 @@ The wiring is very straightforward.
 
 The 5V adapter powers both the ESP32 and the servo. The servo and PIR sensor share the same 5V and GND connections, while each uses its own GPIO pin for the signal.
 
-I've attached a photo of my wiring. It's definitely functional, although I'll probably design a proper enclosure for the electronics later.
+![ESP32 and PIR sensor wiring](./assets/esp32.png)
+
+It's definitely functional, although I'll probably design a proper enclosure for the electronics later.
 
 ## Counterweight
 
@@ -177,7 +187,7 @@ Finally, I added a few Home Assistant automations using the Roborock integration
 
 The motion sensor opens the door immediately. The Roborock state is then used to determine when it's safe to close it again. For example, I close the door after the robot has finished drying its mop:
 
-Close door after mop drying automation
+![Close door after mop drying automation](./assets/automation.png)
 
 ## That's it!
 
