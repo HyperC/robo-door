@@ -2,6 +2,8 @@
 
 A hidden garage door for the Roborock Qrevo Slim, controlled via ESPHome and Home Assistant.
 
+![Door opening and closing](./assets/9FCF9000-1AEB-46AD-A9E1-4EB77A68C78A.GIF)
+
 ## Installation Guide
 
 ### 1. Hardware
