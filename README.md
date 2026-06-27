@@ -2,10 +2,6 @@
 
 A hidden garage door for the Roborock Qrevo Slim, controlled via ESPHome and Home Assistant.
 
-![Door closed from inside](./assets/doorclosed.jpeg)
-
-![Door open from outside](./assets/dooropen-outside.jpeg)
-
 ## Installation Guide
 
 ### 1. Hardware
@@ -52,9 +48,9 @@ Instead of rotating around a fixed pivot, the hinge creates an offset pivot poin
 
 Because my opening sits directly against a wall, I designed custom hinges that mount on top of the frame instead of inside it. STL files are in the [assets](./assets/) folder.
 
-![Hinge mechanism design](./assets/door-design.png)
+![Door closed from inside](./assets/doorclosed.jpeg)
 
-![Hinges installed with door closed](./assets/doorclosed.jpeg)
+![Door open from outside](./assets/dooropen-outside.jpeg)
 
 ## Servo Installation
 
@@ -192,3 +188,5 @@ The motion sensor opens the door immediately. The Roborock state is then used to
 ## That's it!
 
 If anything is unclear, or if you'd like the Shapr3D files, or more details about the ESPHome configuration, just let me know. I'm happy to share everything.
+
+![Hinge mechanism design](./assets/door-design.png)
